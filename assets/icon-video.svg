@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 364 364">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff6969;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #ff3c3c;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-6 {
+        isolation: isolate;
+      }
+
+      .cls-7 {
+        fill: #2b1011;
+      }
+
+      .cls-8 {
+        fill: #ee3124;
+      }
+
+      .cls-9 {
+        fill: url(#Degradado_sin_nombre_618);
+        mix-blend-mode: color-dodge;
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-4" cx="182" cy="182" r="182"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <path class="cls-4" d="M-11.75,35.58h387.51v320.69c0,14.75-11.97,26.72-26.72,26.72H14.97c-14.75,0-26.72-11.97-26.72-26.72V35.58h0Z" transform="translate(364 418.58) rotate(-180)"/>
+    </clipPath>
+    <radialGradient id="Degradado_sin_nombre_618" data-name="Degradado sin nombre 618" cx="182" cy="404.61" fx="182" fy="404.61" r="408.05" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00a193" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#005c61" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="cls-6">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g>
+          <g>
+            <circle class="cls-8" cx="182" cy="182" r="182"/>
+            <g class="cls-10">
+              <g class="cls-5">
+                <circle class="cls-9" cx="182" cy="404.61" r="408.05"/>
+              </g>
+            </g>
+          </g>
+          <g>
+            <polygon class="cls-7" points="66.79 75.14 313.89 107.15 280.97 288.86 50.11 256.4 66.79 75.14"/>
+            <g>
+              <path class="cls-3" d="M242.65,171.97c0,30.38-26.77,55.01-59.8,55.01s-59.8-24.63-59.8-55.01,26.77-55.01,59.8-55.01,59.8,24.63,59.8,55.01Z"/>
+              <path class="cls-1" d="M195.91,118.29l-12.17,54.03-57.94-16.9c7.63-22.29,30.29-38.46,57.04-38.46,4.49,0,8.86.46,13.07,1.33Z"/>
+              <path class="cls-1" d="M239.83,188.67c-7.68,22.21-30.29,38.31-56.99,38.31-3.83,0-7.58-.34-11.21-.97l12.11-53.69,56.1,16.35Z"/>
+              <polygon class="cls-2" points="164.64 134.2 157.88 205.9 228.22 185.61 164.64 134.2"/>
+            </g>
+            <rect class="cls-2" x="168.92" y="181.14" width="2.71" height="142.85" transform="translate(-105.59 381.73) rotate(-81.1)"/>
+            <path class="cls-3" d="M115.96,242.06c-.24,4.74-5.17,8.34-11.02,8.04-5.84-.3-10.39-4.38-10.15-9.12.24-4.74,5.17-8.34,11.02-8.04,5.84.3,10.39,4.38,10.15,9.12Z"/>
+            <path class="cls-2" d="M113.69,89.11l-3.94-.89-4.37,34.57-35.67-5.83,4.07-36.89-3.83-.87-15.33,172.7,3.4.49,3.11-34.46,28.86,5.41-5.33,32.9,4.22.61,24.8-167.74ZM69.7,123.69l34.04,6.99-7.21,41.29-29.31-7.02,2.48-41.26ZM62.49,209.13l4.51-37.17,29.53,6.51-5.64,35.85-28.41-5.19Z"/>
+            <path class="cls-2" d="M308.48,111.21l-2.75-.22-5.83,30.28-27.73-2.93,5.56-29.56-3.51-.28-26.15,170.44,2.61.44,5.71-31.92,23.9,3.83-5.2,32.22,2.29.39,31.11-172.7ZM272.16,146.91l24.8,2.48-7.78,46.81v-.82l-23.9-5.41,6.88-43.06ZM257.73,240.25l6.09-44.04,25.36,5.26-7.78,43.29-23.67-4.51Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
