@@ -178,23 +178,35 @@ a:focus-visible {
   max-width: none;
   object-fit: contain;
   object-position: bottom right;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+  transition: opacity 450ms ease-in-out, visibility 450ms ease-in-out;
 }
 
 .hero-character-mobile {
-  display: none;
+  width: min(80%, 400px);
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 1023.98px) {
   .hero-character-desktop {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .hero-character-mobile {
-    display: block;
-    position: absolute;
-    width: min(80%, 400px);
-    height: auto;
+    opacity: 1;
+    visibility: visible;
     z-index: 5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-character {
+    transition: none;
   }
 }
 
