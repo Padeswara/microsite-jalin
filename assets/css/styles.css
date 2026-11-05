@@ -120,6 +120,7 @@ main > section[id] {
 }
 
 .navigation {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,6 +146,28 @@ main > section[id] {
   text-decoration: underline;
   text-decoration-color: #ee3124;
   text-underline-offset: 5px;
+}
+
+.navigation.has-active-indicator a[aria-current="location"] {
+  text-decoration: none;
+}
+
+.navigation-indicator {
+  position: absolute;
+  height: 2px;
+  border-radius: 2px;
+  background: #ee3124;
+  pointer-events: none;
+}
+
+.navigation.has-active-indicator .navigation-indicator {
+  transition: left 350ms ease, width 350ms ease, top 350ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation.has-active-indicator .navigation-indicator {
+    transition: none;
+  }
 }
 
 a:focus-visible {

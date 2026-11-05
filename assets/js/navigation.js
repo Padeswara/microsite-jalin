@@ -12,6 +12,21 @@ let observerSize = '';
 const visibleSections = new Set();
 let footerVisible = false;
 let navigationScrollTimer;
+const navigationIndicator = document.createElement('span');
+navigationIndicator.className = 'navigation-indicator';
+navigationIndicator.setAttribute('aria-hidden', 'true');
+navigation.append(navigationIndicator);
+
+function updateNavigationIndicator() {
+  const activeLink = navigation.querySelector('[aria-current="location"]');
+  if (!activeLink) return;
+
+  const menuRect = navigation.getBoundingClientRect();
+  const linkRect = activeLink.getBoundingClientRect();
+  navigationIndicator.style.left = `${linkRect.left - menuRect.left + navigation.scrollLeft}px`;
+  navigationIndicator.style.top = `${linkRect.bottom - menuRect.top + navigation.scrollTop - 2}px`;
+  navigationIndicator.style.width = `${linkRect.width}px`;
+}
 
 function setActiveSection(id) {
   navigationLinks.forEach((link) => {
@@ -22,6 +37,7 @@ function setActiveSection(id) {
     }
   });
 
+  updateNavigationIndicator();
   scheduleActiveLinkVisibility();
 }
 
@@ -109,6 +125,10 @@ function updateHeaderAppearance() {
 
 observeSections();
 updateHeaderAppearance();
+updateNavigationIndicator();
+requestAnimationFrame(() => navigation.classList.add('has-active-indicator'));
+new ResizeObserver(updateNavigationIndicator).observe(navigation);
+document.fonts.ready.then(updateNavigationIndicator);
 window.addEventListener('pageshow', updateHeaderAppearance);
 new ResizeObserver(observeSections).observe(header);
 window.addEventListener('resize', observeSections);
