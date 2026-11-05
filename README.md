@@ -16,14 +16,6 @@ Open `index.html` directly in a browser or use the Live Server extension in VS C
 - `assets/js/submission.js` — submission form handling.
 - `design ai/` — source design files.
 
-## Hero Settings
-
-- Desktop (1024px wide and above): `hero-character.png`, with a 48px title.
-- Mobile (below 1024px): `hero-character-m.png`, with a 40px title.
-- Both character images use absolutely positioned `<img>` elements and switch without a transition.
-- On mobile, z-index keeps the text above the character. Adjust its vertical spacing using `margin-top` on `.hero-copy` inside the mobile media query.
-- Reveal animations use opacity without X/Y translation.
-
 ## Form and Deployment
 
 The form is not connected to a backend and does not send any data. Configure the endpoint and submission handling in `assets/js/submission.js` before accepting registrations.
