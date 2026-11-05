@@ -1,31 +1,31 @@
 # JurnaLink Awards 2026
 
-Microsite kompetisi jurnalistik Jalin dan Kompas TV, dibuat dengan HTML, CSS, dan JavaScript tanpa framework atau proses build.
+A journalism competition microsite for Jalin and Kompas TV, built with HTML, CSS, and JavaScript. No framework or build step is required.
 
-## Menjalankan
+## Getting Started
 
-Buka `index.html` langsung di browser atau gunakan ekstensi Live Server di VS Code. Tidak perlu instalasi dependency. Font Albert Sans dimuat dari Google Fonts dan membutuhkan koneksi internet.
+Open `index.html` directly in a browser or use the Live Server extension in VS Code. No dependency installation is needed. The Albert Sans font loads from Google Fonts and requires an internet connection.
 
-## Struktur
+## Project Structure
 
-- `index.html` — konten halaman, kategori, hadiah, juri, formulir, timeline, dan syarat ketentuan.
-- `assets/css/styles.css` — tampilan dan pengaturan responsif.
-- `assets/img/` — logo, ilustrasi, dan gambar pendukung.
-- `assets/js/navigation.js` — navigasi dan perilaku header.
-- `assets/js/reveal.js` — efek fade-in konten saat halaman dibuka atau digulir.
-- `assets/js/submission.js` — penanganan formulir submission.
-- `design ai/` — berkas desain sumber.
+- `index.html` — page content, categories, prizes, judges, submission form, timeline, and terms and conditions.
+- `assets/css/styles.css` — styles and responsive layout.
+- `assets/img/` — logos, illustrations, and supporting images.
+- `assets/js/navigation.js` — navigation and header behavior.
+- `assets/js/reveal.js` — content fade-in effects on page load and scroll.
+- `assets/js/submission.js` — submission form handling.
+- `design ai/` — source design files.
 
-## Pengaturan hero
+## Hero Settings
 
-- Desktop (lebar mulai 1024px): `hero-character.png`, judul 48px.
-- Mobile (lebar di bawah 1024px): `hero-character-m.png`, judul 40px.
-- Kedua karakter menggunakan elemen `<img>` dengan posisi absolute dan berganti tanpa transisi.
-- Teks mobile berada di atas karakter melalui z-index. Jarak vertikalnya diatur lewat `margin-top` pada `.hero-copy` dalam media query mobile.
-- Animasi reveal menggunakan opacity tanpa translate X/Y.
+- Desktop (1024px wide and above): `hero-character.png`, with a 48px title.
+- Mobile (below 1024px): `hero-character-m.png`, with a 40px title.
+- Both character images use absolutely positioned `<img>` elements and switch without a transition.
+- On mobile, z-index keeps the text above the character. Adjust its vertical spacing using `margin-top` on `.hero-copy` inside the mobile media query.
+- Reveal animations use opacity without X/Y translation.
 
-## Formulir dan publikasi
+## Form and Deployment
 
-Formulir belum terhubung ke backend; data tidak dikirim. Konfigurasikan endpoint dan penanganan pengiriman di `assets/js/submission.js` sebelum digunakan untuk pendaftaran.
+The form is not connected to a backend and does not send any data. Configure the endpoint and submission handling in `assets/js/submission.js` before accepting registrations.
 
-Untuk publikasi, unggah `index.html` beserta folder `assets/` ke hosting statis dengan struktur folder yang sama.
+To deploy, upload `index.html` and the `assets/` folder to a static hosting service, preserving the folder structure.
