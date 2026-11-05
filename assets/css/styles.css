@@ -178,28 +178,24 @@ a:focus-visible {
   max-width: none;
   object-fit: contain;
   object-position: bottom right;
-  opacity: 1;
-  visibility: visible;
+  clip-path: inset(0);
   pointer-events: none;
-  transition: opacity 450ms ease-in-out, visibility 450ms ease-in-out;
+  transition: clip-path 550ms ease-in-out;
 }
 
 .hero-character-mobile {
   width: min(80%, 400px);
   height: auto;
-  opacity: 0;
-  visibility: hidden;
+  clip-path: inset(0 0 0 100%);
 }
 
 @media (max-width: 1023.98px) {
   .hero-character-desktop {
-    opacity: 0;
-    visibility: hidden;
+    clip-path: inset(0 0 0 100%);
   }
 
   .hero-character-mobile {
-    opacity: 1;
-    visibility: visible;
+    clip-path: inset(0);
     z-index: 5;
   }
 }
