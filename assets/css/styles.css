@@ -55,17 +55,15 @@ main > section[id] {
   scroll-margin-top: var(--header-height, 78px);
 }
 
-/* Reveal content with a gentle rise; backgrounds and layout stay in place. */
+/* Fade content in while keeping its position fixed. */
 
 .section-reveal > div {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 1100ms ease-out, transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1100ms ease-out;
 }
 
 .section-reveal.reveal-pending > div {
   opacity: 0;
-  transform: translateY(36px);
   /* Set the starting pose instantly;
   only animate the reveal, never the reset. */ transition: none;
 }
@@ -73,7 +71,6 @@ main > section[id] {
 @media (prefers-reduced-motion: reduce) {
   .section-reveal > div {
     opacity: 1 !important;
-    transform: none !important;
     transition: none;
   }
 }
@@ -81,7 +78,6 @@ main > section[id] {
 @media print {
   .section-reveal > div {
     opacity: 1 !important;
-    transform: none !important;
     transition: none;
   }
 }
@@ -164,7 +160,7 @@ a:focus-visible {
   height: 100%;
   margin-top: calc(-1 * var(--header-height, 78px));
   padding-top: var(--header-height, 78px);
-  background: #fff url("assets/bg.jpg") center center / cover;
+  background: #fff url("../img/bg.jpg") center center / cover;
 }
 
 .hero ~ section {
@@ -184,9 +180,21 @@ a:focus-visible {
   object-position: bottom right;
 }
 
+.hero-character-mobile {
+  display: none;
+}
+
 @media (max-width: 1023.98px) {
-  .hero-character {
+  .hero-character-desktop {
     display: none;
+  }
+
+  .hero-character-mobile {
+    display: block;
+    position: absolute;
+    width: min(80%, 400px);
+    height: auto;
+    z-index: 5;
   }
 }
 
@@ -217,6 +225,12 @@ a:focus-visible {
   font-size: var(--section-title-size);
   font-weight: 700;
   line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+  .hero-copy h1 {
+    font-size: 48px;
+  }
 }
 
 .hero-tagline {
@@ -253,7 +267,7 @@ h2 {
   position: absolute;
   inset: -8px;
   z-index: -1;
-  background: var(--blue) url("assets/bg-2.jpg") center / cover no-repeat;
+  background: var(--blue) url("../img/bg-2.jpg") center / cover no-repeat;
   pointer-events: none;
 }
 
@@ -399,9 +413,9 @@ h2 {
   }
 
   .header-inner {
-    padding: 20px 30px;
+    padding: 10px 30px;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
   }
 
   .partners {
@@ -432,10 +446,17 @@ h2 {
 
 @media (max-width: 1023.98px) {
   .hero-inner {
+    z-index: 10;
     width: 100%;
     padding: 40px 24px;
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .hero-copy {
+    align-self: start;
+    z-index: 10;
+    margin-top: 50px;
   }
 
   .hero-tagline {
@@ -445,11 +466,11 @@ h2 {
 
 @media (max-width: 1023.98px) {
   .hero-copy h1 {
-    font-size: 24px;
+    font-size: 40px;
   }
 
   .hero-tagline {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -579,7 +600,7 @@ h2 {
 }
 
 .timeline {
-  background: #fff url("assets/bg-original.jpg") center / cover;
+  background: #fff url("../img/bg-original.jpg") center / cover;
   color: var(--blue);
 }
 
@@ -650,7 +671,7 @@ h2 {
 
 .kategori {
   color: var(--blue);
-  background: #fff url("assets/bg.jpg") center / cover no-repeat;
+  background: #fff url("../img/bg.jpg") center / cover no-repeat;
 }
 
 .kategori-inner {
@@ -689,6 +710,17 @@ h2 {
   line-height: 1.3;
 }
 
+@media (min-width: 1024px) {
+  .kategori-grid {
+    max-width: 900px;
+    gap: 36px;
+  }
+
+  .kategori-item img {
+    max-width: 230px;
+  }
+}
+
 @media (max-width: 1023.98px) {
   .kategori-inner {
     padding-inline: 16px;
@@ -697,7 +729,7 @@ h2 {
 
 .submission {
   color: var(--blue);
-  background: #fff url("assets/bg.jpg") center / cover no-repeat;
+  background: #fff url("../img/bg.jpg") center / cover no-repeat;
 }
 
 .submission-inner {
@@ -712,7 +744,7 @@ h2 {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px clamp(32px, 10vw, 128px);
+  gap: 24px 32px;
   width: 100%;
   margin: 58px auto 0;
 }
@@ -720,20 +752,20 @@ h2 {
 .submission-column {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   min-width: 0;
 }
 
 .submission-field {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
   min-width: 0;
 }
 
 .submission-field label {
   color: #5d6171;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -748,7 +780,7 @@ h2 {
   background: #f3f3f7;
   color: #5d6171;
   font: inherit;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .submission-form input::placeholder {
@@ -861,7 +893,7 @@ h2 {
   .submission-form {
     grid-template-columns: minmax(0, 1fr);
     margin-top: 46px;
-    gap: 24px;
+    gap: 20px;
   }
 
   .submission-form input {
@@ -891,7 +923,7 @@ h2 {
   padding: 40px 48px;
   border: 0;
   border-radius: 24px;
-  background: #fff url("assets/bg.jpg") center / cover;
+  background: #fff url("../img/bg.jpg") center / cover;
   color: var(--blue);
 }
 
@@ -925,7 +957,6 @@ h2 {
 @media (min-width: 1024px) {
   .hero-inner,
   .judges-inner,
-  .kategori-inner,
   .prizes-inner,
   .submission-inner,
   .timeline-inner,
