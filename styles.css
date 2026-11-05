@@ -116,11 +116,11 @@ main > section[id] {
 }
 
 .kompas-logo {
-  width: 160px;
+  width: 150px;
 }
 
 .jalin-logo {
-  width: 120px;
+  width: 70px;
 }
 
 .navigation {
@@ -436,11 +436,11 @@ h2 {
   }
 
   .kompas-logo {
-    width: 180px;
+    width: 140px;
   }
 
   .jalin-logo {
-    width: 90px;
+    width: 60px;
   }
 
   .navigation {
@@ -578,8 +578,7 @@ h2 {
 
 .prize-winners img {
   width: 100%;
-  max-width: 88px;
-  aspect-ratio: 1;
+  max-width: 60px;
   object-fit: contain;
 }
 
@@ -588,6 +587,19 @@ h2 {
   font-size: min(clamp(20px, 2.4vw, 30px), var(--section-title-size));
   font-weight: 700;
   line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .prize-winners {
+    gap: 60px;
+  }
+
+  .prize-winners img {
+    object-fit: contain;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .timeline {
@@ -947,6 +959,35 @@ h2 {
   margin: 0;
   font-size: 16px;
   line-height: 1.4;
+}
+
+/* Keep section content aligned to the same desktop container. */
+@media (min-width: 1001px) {
+  .hero-inner,
+  .judges-inner,
+  .kategori-inner,
+  .prizes-inner,
+  .submission-inner,
+  .timeline-inner,
+  .terms-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 30px;
+  }
+
+  .hero-copy {
+    padding-inline: 0;
+  }
+
+  .judges-grid,
+  .timeline-months {
+    max-width: none;
+  }
+
+  .judges-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 850px) {
