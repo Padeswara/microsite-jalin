@@ -4,7 +4,7 @@
   --section-title-size: 30px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   :root {
     --section-title-size: 26px;
   }
@@ -184,7 +184,7 @@ a:focus-visible {
   object-position: bottom right;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
   .hero-character {
     display: none;
   }
@@ -352,7 +352,7 @@ h2 {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1023.98px) {
   .judges-inner {
     min-height: 560px;
     padding: 56px 7% 110px;
@@ -370,7 +370,7 @@ h2 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .judges-inner {
     padding: 44px 26px 88px;
   }
@@ -378,7 +378,7 @@ h2 {
   .judges-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: center;
-    gap: 40px 20px;
+    gap: 30px 30px;
     margin-top: 64px;
   }
 
@@ -393,31 +393,7 @@ h2 {
   }
 }
 
-@media (max-width: 850px) and (min-width: 641px) {
-  .header-inner {
-    padding-inline: 30px;
-    gap: 24px;
-  }
-
-  .partners {
-    gap: 26px;
-  }
-
-  .navigation {
-    gap: 18px;
-    font-size: 10px;
-  }
-
-  .kompas-logo {
-    width: 160px;
-  }
-
-  .jalin-logo {
-    width: 120px;
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .navigation {
     color: var(--blue);
   }
@@ -454,7 +430,7 @@ h2 {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1023.98px) {
   .hero-inner {
     width: 100%;
     padding: 40px 24px;
@@ -467,7 +443,7 @@ h2 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .hero-copy h1 {
     font-size: 24px;
   }
@@ -511,7 +487,7 @@ h2 {
   margin-inline: auto;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .prizes-inner {
     padding: 44px 26px 64px;
   }
@@ -589,7 +565,7 @@ h2 {
   line-height: 1.2;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .prize-winners {
     gap: 60px;
   }
@@ -651,7 +627,7 @@ h2 {
   line-height: 1.3;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .timeline-inner {
     padding: 44px 26px 64px;
   }
@@ -713,7 +689,7 @@ h2 {
   line-height: 1.3;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .kategori-inner {
     padding-inline: 16px;
   }
@@ -831,36 +807,20 @@ h2 {
   gap: clamp(12px, 2vw, 26px);
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1024px) {
   .navigation {
     font-size: 14px;
     gap: 35px;
   }
 }
 
-@media (max-width: 1000px) and (min-width: 641px) {
-  .navigation {
-    color: var(--blue);
-  }
-
-  .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
-  }
-
-  .navigation {
-    width: 100%;
-  }
-}
-
-@media (max-width: 850px) {
+@media (max-width: 1023.98px) {
   .submission-inner {
     padding-inline: 36px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .navigation {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -892,7 +852,7 @@ h2 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .submission-inner {
     min-height: auto;
     padding: 44px 26px 90px;
@@ -962,7 +922,7 @@ h2 {
 }
 
 /* Keep section content aligned to the same desktop container. */
-@media (min-width: 1001px) {
+@media (min-width: 1024px) {
   .hero-inner,
   .judges-inner,
   .kategori-inner,
@@ -990,7 +950,7 @@ h2 {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1023.98px) {
   .terms-inner {
     padding-inline: 7%;
   }
@@ -1004,7 +964,7 @@ h2 {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023.98px) {
   .terms-inner {
     padding: 48px 20px 64px;
   }
